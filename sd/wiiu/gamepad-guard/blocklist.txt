@@ -1,0 +1,27 @@
+# GamePad-Waechter - Sperrliste
+#
+# Spiele in dieser Liste werden im Modus "Ohne GamePad" nicht gestartet.
+# Eine Zeile pro Spiel. Erlaubt sind:
+#   - ein (Teil des) Spielnamens, Gross-/Kleinschreibung egal, z.B.  Wii Sports Club
+#   - eine Title-ID mit 16 Hex-Zeichen, z.B.  00050000-10101E00
+# Zeilen mit # am Anfang werden ignoriert.
+#
+# Diese Startliste ist nicht vollstaendig und nicht fuer jedes Spiel geprueft -
+# passe sie an deine Sammlung an.
+
+Wii Sports Club
+Nintendo Land
+Game & Wario
+ZombiU
+Wii Party U
+Wii Fit U
+Splatoon
+Star Fox Zero
+Star Fox Guard
+Kirby and the Rainbow
+Regenbogen-Pinsel
+Captain Toad
+Paper Mario: Color Splash
+Super Mario Maker
+Art Academy
+Affordable Space Adventures

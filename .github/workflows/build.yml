@@ -1,0 +1,25 @@
+name: Build plugin
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image with toolchain
+        run: docker build . -t gamepad-guard-builder
+      - name: Build GamePadGuard.wps
+        run: docker run --rm -v ${PWD}:/project gamepad-guard-builder make
+      - name: Package SD card files
+        run: |
+          mkdir -p out/wiiu/environments/aroma/plugins
+          cp GamePadGuard.wps out/wiiu/environments/aroma/plugins/
+          cp -r sd/wiiu/gamepad-guard out/wiiu/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GamePadGuard-SD
+          path: out
